@@ -1,0 +1,63 @@
+/* Fondo general */
+body {
+  background-color: #f0f0f0; /* gris claro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal: dos columnas */
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+/* Columna izquierda */
+.columna-izquierda {
+  width: 35%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Foto de perfil */
+.foto-perfil {
+  width: 50%;
+  border-radius: 25%;
+  margin-bottom: 20px;
+}
+
+/* Columna derecha */
+.columna-derecha {
+  width: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h2 {
+  color: #333333;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #0077cc;
+}
+
+/* Listas */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Párrafos */
+p {
+  color: #555555;
+  line-height: 1.5;
+}
+

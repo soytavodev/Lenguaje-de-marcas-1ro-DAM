@@ -1,0 +1,27 @@
+<!doctype html>
+
+<!--El idioma de la página es en español-->
+
+<html lang="es"> 
+  <head> 
+<!--Dentro de la etiqueta <head> van los metadatos, es decir, la información que el usuario no ve, 
+pero que es imprescindible para el navegador-->
+
+  	<title>NO MAN'S SKY</title>   <!--Este es el título de la página-->
+  </head>
+	
+  <body>  <!--Aca va la información que el usuario ve y con la cual interactúa.-->
+  	<h1>Bienvenido a la fanpage de NO MAN'S SKY</h1>    <!--Colocamos el título principal, o mas importante
+ con la etiqueta <h1>, recordemos que el orden de relevancia decrece del h1 al h6, siendo este ultimo 
+el menor en jerarquía.-->
+  	<h2>El juego número uno de exploración espacial</h2>   <!--Un titúlo secundario-->
+
+		<!--Y luego agregamos parrafos según convenga-->
+  	<p>No Man's Sky es un juego con exploración planetaria, océanos profundos, batallas basadas en el espacio,
+depredadores y presas, y mucho más en varios mundos generados por procedural, es decir, cada planeta, criatura, 
+nave, multiherramienta y otros objetos son creados utilizando algoritmos en el propio juego, lo que hace que haya 
+diversidad en cada objeto creado.</p>
+  	<p>Cada mundo tendrá su propio ecosistema, recompensas y peligros, lo que guiará al jugador a través de los cuatro 
+pilares fundamentales del juego: explorar, luchar, comerciar y sobrevivir.</p>
+  </body>
+</html>

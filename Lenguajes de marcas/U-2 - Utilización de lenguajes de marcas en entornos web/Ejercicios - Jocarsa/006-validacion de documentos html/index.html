@@ -1,0 +1,74 @@
+<!--
+Programa: Adaptación de imagen con Grid y Flexbox v0.1
+
+Autor: Gustavo Delnardo
+
+En este ejercicio vamos a ver cómo centrar y adaptar una imagen dentro de un contenedor utilizando Grid y Flexbox en CSS. Ambas técnicas son esenciales para diseñar estructuras limpias, flexibles y profesionales en páginas web modernas.
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptación de Imagen - Gustavo Delnardo</title>
+
+    <!-- Hoja de estilo interna -->
+    <style>
+      /* --- Versión con CSS Grid --- */
+      .grid-container {
+        display: grid;               /* Activamos el sistema de cuadrícula */
+        place-items: center;         /* Centramos el contenido tanto vertical como horizontalmente */
+        border: 2px solid #333;      /* Añadimos borde para visualizar el contenedor */
+        width: 80%;                  /* Ancho del contenedor */
+        margin: 40px auto;           /* Centrado horizontal con margen automático */
+        padding: 10px;
+        background-color: #f0f0f0;   /* Fondo claro */
+      }
+
+      .grid-item {
+        max-width: 100%;             /* La imagen no supera el ancho del contenedor */
+        height: auto;                /* Mantiene la proporción original */
+        border-radius: 10px;         /* Bordes ligeramente redondeados */
+      }
+
+      /* --- Versión con Flexbox --- */
+      .flex-container {
+        display: flex;               /* Activamos el modelo Flexbox */
+        justify-content: center;     /* Centrado horizontal */
+        align-items: center;         /* Centrado vertical */
+        border: 2px solid #666;
+        width: 80%;
+        margin: 40px auto;
+        padding: 10px;
+        background-color: #e8f4ff;   /* Fondo celeste suave */
+      }
+
+      .flex-item {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Adaptando una imagen al contenedor</h1>
+    <p>
+      Soy Gustavo Delnardo, estudiante de primer año de DAM.  
+      Me interesa la tecnología, el anime, los videojuegos y la música, y disfruto aprendiendo a diseñar páginas web adaptables.
+    </p>
+
+    <!-- Ejemplo con Grid -->
+    <div class="grid-container">
+      <img src="gustavo.jpg" alt="Gustavo Delnardo" class="grid-item">
+    </div>
+
+    <!-- Ejemplo con Flexbox -->
+    <div class="flex-container">
+      <img src="gustavo.jpg" alt="Gustavo Delnardo" class="flex-item">
+    </div>
+  </body>
+</html>
+
+<!--Grid y Flexbox permiten alinear y escalar imágenes dentro de un contenedor sin deformarlas. Se comprobó la importancia de validar el documento HTML para mantener un código limpio y profesional. Estas herramientas ayudarán a crear sitios web más modernos, organizados y responsivos.-->

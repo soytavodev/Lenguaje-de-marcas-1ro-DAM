@@ -1,0 +1,65 @@
+<!--
+Portafolio v0.1
+
+Autor: Gustavo Delnardo
+
+Esta actividad nos permite aplicar los fundamentos de HTML semántico y CSS estructurado, dos pilares en el desarrollo web.-->
+
+<!--Empezamos con la estructura básica
+recordemos que en esta parte del -head- introduciremos los datos
+imprescindibles para el navegador, pero que no serán vistos por los usuarios-->
+
+<!DOCTYPE html>
+<html lang="es">  <!--Idioma-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Gustavo Delnardo</title> 		<!--Título de la pestaña-->
+  <link rel="stylesheet" href="portafolio.css"> 		<!-- Y la etiqueta -link- que enlaza
+</head>																							nuestro .html con el .css para estilos-->
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Portafolio - Gustavo Delnardo</h1>			<!--Aqui ya incluimos lo que verá el usuario-->
+    <p>Contacto</p>															<!--Utilizamos las etiquetas -h1- para títulos-->
+    <p>📧 gustavo1@gmail.com</p>								<!--y las  etiquetas -p- para parrafos-->
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h2>Mis Proyectos de cocina</h2>
+
+    <!-- Proyecto 1 -->
+    <article class="Tequeños">
+      <img src="tequeño.jpg" alt="Tequeños">    <!--Aca podemos agregar una imagen que debe estar en la-->
+      <h3>Tequeños de queso</h3>								<!--carpeta donde estan el .html y el .css-->
+      <p>El tequeño es una masa de trigo frita rellena de queso blanco semiduro, y es una comida o refrigerio popular en Venezuela. Para prepararlo, se envuelve la masa alrededor de un palito de queso, se le da forma de palito de pan y luego se fríe o, a veces, se hornea.</p>
+      
+    </article>
+
+    <!-- Proyecto 2 -->
+    <article class="Empanadas">
+      <img src="empanada.jpg" alt="Empanadas Venezolanas">
+      <h3>Empanadas</h3>
+      <p>Las empanadas venezolanas son medialunas rellenas que se cocinan fritas. Se preparan con harina de maíz precocida, que es lo que las hace tan crujientes y distintas al resto de empanadas del continente.</p>
+    </article>
+
+    <!-- Proyecto 3 -->
+    <article class="arepa">
+      <img src="arepa.jpg" alt="Arepas Venezolanas">
+      <h3>Arepas</h3>
+      <p>La arepa es una preparación culinaria de origen amerindio hecha a base de masa de maíz cocido. Tiene forma circular y aplanada, y se cocina mediante métodos diversos como el asado, horneado o la fritura. La masa puede incluir variaciones contemporáneas que incorporan otros ingredientes como queso, huevos o vegetales.</p>
+    </article>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Gustavo Delnardo - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
+
+<!--Comprender cómo construir un front limpio y profesional es el primer paso para luego añadir funcionalidad (panel de administración, bases de datos, etc.). Dominar esta base te permitirá crear tu propio sitio personal y mostrar tus proyectos de forma atractiva y ordenada.
