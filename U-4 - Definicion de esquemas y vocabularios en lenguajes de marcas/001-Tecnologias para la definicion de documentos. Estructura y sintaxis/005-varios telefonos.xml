@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona>
+	<nombre>Gustavo Enrique</nombre>
+	<apellidos>Delnardo Vallejo</apellidos>
+	<telefonos>
+		<telefono>1234567</telefono>
+		<telefono>6534646</telefono>
+		...
+	</telefonos>
+</persona>
+
