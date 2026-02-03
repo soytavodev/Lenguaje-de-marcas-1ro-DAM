@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tienda</title>
+  <style>
+    /* Base Reset & Typography */
+    body, html {
+      padding: 0;
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevents bounce effects on mobile */
+      background-color: #f8f9fa;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fixed Navigation Elements */
+    header, footer {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      background: #111;
+    }
+
+    /* Scrollable Content Area */
+    main {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    /* Product Grid Layout */
+    #productos div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    article {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    article h4 {
+      margin: 0 0 10px 0;
+      font-size: 1rem;
+    }
+
+    /* Touch-Optimized Buttons */
+    button {
+      width: 100%;
+      height: 50px; /* Large hit target for thumbs */
+      background: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      -webkit-tap-highlight-color: transparent; /* Removes blue flash on tap */
+    }
+
+    button:active {
+      background: #27ae60;
+      transform: scale(0.96);
+    }
+
+    /* Form Styling */
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px; /* Essential: Prevents iOS auto-zoom on focus */
+      background: white;
+    }
+
+    input[type="text"]:focus {
+      border-color: #000;
+      outline: none;
+    }
+
+    /* Send Order 'Button' */
+    #enviar {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      user-select: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #enviar:active {
+      background: #333;
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microtienda</h1>
+  </header>
+
+  <main>
+    <section id="productos">
+      <h3>Productos</h3>
+      <div>
+        <article>
+          <h4>Zapatillas</h4>
+          <button nombre="zapatillas">30€</button>
+        </article>
+        <article>
+          <h4>Pantalones</h4>
+          <button nombre="pantalones">20€</button>
+        </article>
+        <article>
+          <h4>Camiseta</h4>
+          <button nombre="camiseta">40€</button>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h3>Datos de cliente</h3>
+      <div>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellidos" placeholder="Apellidos">
+        <input type="text" id="email" placeholder="Email">
+        <div id="enviar">Enviar pedido</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    (c) 2026 Gustavo Delnardo
+  </footer>
+
+  <script>
+    var pedido = {
+      cliente: {},
+      productos: [],
+      pedido: {}
+    };
+
+    // Add products to cart
+    let botones = document.querySelectorAll("button");
+    botones.forEach(function(boton) {
+      boton.onclick = function() {
+        pedido.productos.push({
+          "nombre": this.getAttribute("nombre"),
+          "precio": this.textContent
+        });
+        console.log("Producto añadido:", pedido.productos);
+      }
+    });
+
+    // Capture customer data
+    let boton_enviar = document.querySelector("#enviar");
+    boton_enviar.onclick = function() {
+      let nombre_cliente = document.querySelector("#nombre").value;
+      let apellidos_cliente = document.querySelector("#apellidos").value;
+      let email_cliente = document.querySelector("#email").value;
+      
+      pedido.cliente = {
+        "nombre": nombre_cliente,
+        "apellidos": apellidos_cliente,
+        "email": email_cliente
+      };
+      
+      console.log("Pedido Final:", pedido);
+      alert("Pedido enviado. Revisa la consola.");
+    }
+  </script>
+</body>
+</html>
